@@ -1,4 +1,4 @@
-package test; // 测试文件所在包
+package com.lozumi.NAMS; // 测试文件所在包
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -7,7 +7,7 @@ import java.util.Date;
 
 import junit.framework.TestCase;
 
-import imp.*; // 实现文件所在包
+//import imp.*; // 实现文件所在包
 
 public class Test extends TestCase {
 	private ActivityManagementSystem amSystem = new ActivityManagementSystem();

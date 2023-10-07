@@ -4,6 +4,12 @@ public class Teacher extends User{
     String teacherNo;
     String department;
 
+    public Teacher(String id, String name, String phoneNo, String email, String teacherNo, String department) {
+        super(id, name, phoneNo, email);
+        this.teacherNo = teacherNo;
+        this.department = department;
+    }
+
     public String getTeacherNo() {
         return teacherNo;
     }

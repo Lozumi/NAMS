@@ -1,7 +1,15 @@
 package com.lozumi.NAMS;
 
+import java.util.Date;
+
 public class ArtisticActivity extends Activity {
     String type;
+
+    public ArtisticActivity(String id, String name, Date startTime, Date endTime, String description, String site, String type) {
+        super(id, name, startTime, endTime, description, site);
+        this.type = type;
+    }
+
     public String getType(){
         return this.type;
     }

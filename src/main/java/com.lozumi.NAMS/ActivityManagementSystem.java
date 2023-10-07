@@ -12,7 +12,7 @@ public class ActivityManagementSystem {
     public UserSubSystem getUserSubSystem(){
         return usSystem;
     }
-    public ActivitySubSystem getActivitySubSystem( {
+    public ActivitySubSystem getActivitySubSystem() {
         return asSystem;
     }
 }

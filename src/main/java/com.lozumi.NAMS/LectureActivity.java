@@ -1,7 +1,15 @@
 package com.lozumi.NAMS;
 
+import java.util.Date;
+
 public class LectureActivity extends Activity {
     String keySpeaker;
+
+    public LectureActivity(String id, String name, Date startTime, Date endTime, String description, String site, String keySpeaker) {
+        super(id, name, startTime, endTime, description, site);
+        this.keySpeaker = keySpeaker;
+    }
+
     public String getKeySpeaker(){
         return this.keySpeaker;
     }

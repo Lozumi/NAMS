@@ -3,6 +3,11 @@ package com.lozumi.NAMS;
 public class Organizer extends User{
     String unit;
 
+    public Organizer(String id, String name, String phoneNo, String email, String unit) {
+        super(id, name, phoneNo, email);
+        this.unit = unit;
+    }
+
     public String getUnit() {
         return unit;
     }

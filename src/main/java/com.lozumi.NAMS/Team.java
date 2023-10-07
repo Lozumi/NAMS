@@ -6,8 +6,8 @@ public class Team {
     String teamName;
     String department;
     Student creator;
-    List<Student> students;
-    List<Teacher> teachers;
+    List<Student> studentList;
+    List<Teacher> teacherList;
 
     public Team(String teamId, String teamName, String department, Student creator) {
         this.teamId = teamId;
@@ -33,32 +33,32 @@ public class Team {
     }
 
     public List<Student> getStudentList() {
-        return students;
+        return studentList;
     }
 
     public List<Teacher> getTeacherList() {
-        return teachers;
+        return teacherList;
     }
 
     public void addStudent(Student student) {
-        students.add(student);
+        studentList.add(student);
         student.teamList.add(this);
     }
 
     public void addTeacher(Teacher teacher) {
-        teachers.add(teacher);
+        teacherList.add(teacher);
     }
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Team").append('[')
+        final StringBuilder sb = new StringBuilder("Team")
                 .append(teamId)
                 .append("_")
                 .append(teamName)
                 .append("_")
                 .append(department)
-                .append("_creator=")
-                .append(creator)
-                .append(']');
+                .append("_")
+                .append(creator);
         return sb.toString();
     }
 }

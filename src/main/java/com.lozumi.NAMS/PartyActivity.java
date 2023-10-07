@@ -1,8 +1,17 @@
 package com.lozumi.NAMS;
 
+import java.util.Date;
+
 public class PartyActivity extends Activity {
     String theme;
     String classification;
+
+    public PartyActivity(String id, String name, Date startTime, Date endTime, String description, String site, String theme, String classification) {
+        super(id, name, startTime, endTime, description, site);
+        this.theme = theme;
+        this.classification = classification;
+    }
+
     public String getTheme(){
         return this.theme;
     }

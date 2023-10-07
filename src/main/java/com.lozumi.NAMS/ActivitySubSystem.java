@@ -3,9 +3,11 @@ import java.util.List;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.stream.Collectors;
 
 public class ActivitySubSystem {
     List<Activity> aList;
+
     public void addActivity(Activity activity){
         aList.add(activity);
     }
@@ -34,14 +36,16 @@ public class ActivitySubSystem {
         return null; // 如果找不到活动，则返回null
     }
 
-    public Activity getActivityByDate(Date date){
-        // 根据日期查找活动并返回
+    public ArrayList<Activity> getActivitiesByDate(Date date) {
+        List<Activity> matchingActivities = new ArrayList<>();
+
+        // 根据日期查找与给定日期相交的活动
         for (Activity activity : aList) {
             if (activity.getStartTime().compareTo(date) <= 0 && activity.getEndTime().compareTo(date) >= 0) {
-                return activity;
+                matchingActivities.add(activity);
             }
         }
-        return null; // 如果找不到活动，则返回null
+        return matchingActivities.stream().collect(Collectors.toCollection(ArrayList::new));
     }
 
     public List<Activity> getActivityList(){

@@ -1,14 +1,15 @@
 package com.lozumi.NAMS;
 import java.util.List;
 
-public class Student {
+public class Student extends User {
     String studentNo;
     boolean gender;
     String grade;
     String department;
     List<Team> teamList;
 
-    public Student(String studentNo, boolean gender, String grade, String department) {
+    public Student(String id, String name, String phoneNo, String email, String studentNo, boolean gender, String grade, String department) {
+        super(id, name, phoneNo, email);
         this.studentNo = studentNo;
         this.gender = gender;
         this.grade = grade;
@@ -37,16 +38,16 @@ public class Student {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Student").append('[')
-                .append("studentNo=")
+        final StringBuilder sb = new StringBuilder("Student")
                 .append(studentNo)
-                .append("_gender=")
+                .append("_")
                 .append(gender)
-                .append("_grade=")
+                .append("_")
                 .append(grade)
-                .append("_department=")
+                .append("_")
                 .append(department)
-                .append(']');
+                .append("_")
+                .append(teamList);
         return sb.toString();
     }
 }
