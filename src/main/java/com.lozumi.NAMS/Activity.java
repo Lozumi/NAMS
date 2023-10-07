@@ -129,14 +129,24 @@ public class Activity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Activity").append('[')
-                .append("id=").append(id)
-                .append(", name=").append(name)
-                .append(", startTime=").append(startTime)
-                .append(", endTime=").append(endTime)
-                .append(", description=").append(description)
-                .append(", site=").append(site)
-                .append(']');
+        final StringBuilder sb = new StringBuilder("Activity")
+                .append(id)
+                .append("_")
+                .append(name)
+                .append("_")
+                .append(startTime)
+                .append("_")
+                .append(endTime)
+                .append("_")
+                .append(description)
+                .append("_")
+                .append(site)
+                .append("_")
+                .append(teams)
+                .append("_")
+                .append(teachers)
+                .append("_")
+                .append(organizers);
         return sb.toString();
     }
 }

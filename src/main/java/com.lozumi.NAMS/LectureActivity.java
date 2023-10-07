@@ -8,22 +8,26 @@ public class LectureActivity extends Activity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("LectureActivity").append('[')
-                .append("keySpeaker=")
+        final StringBuilder sb = new StringBuilder("LectureActivity")
                 .append(keySpeaker)
-                .append("_id=")
+                .append("_")
                 .append(id)
-                .append("_name=")
+                .append("_")
                 .append(name)
-                .append("_startTime=")
+                .append("_")
                 .append(startTime)
-                .append("_endTime=")
+                .append("_")
                 .append(endTime)
-                .append("_description=")
+                .append("_")
                 .append(description)
-                .append("_site=")
+                .append("_")
                 .append(site)
-                .append(']');
+                .append("_")
+                .append(teams)
+                .append("_")
+                .append(teachers)
+                .append("_")
+                .append(organizers);
         return sb.toString();
     }
 }
