@@ -2,9 +2,10 @@ package com.lozumi.NAMS;
 import java.util.List;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ActivitySubSystem {
-    List<Activity> aList = new ArrayList<>();
+    List<Activity> aList;
     public void addActivity(Activity activity){
         aList.add(activity);
     }
@@ -48,11 +49,13 @@ public class ActivitySubSystem {
         return aList;
     }
 
-    public int checkActivityNumOfTeam(String teamId){
+    public int checkActivityNumOfTeam(String teamId) {
         // 计算特定团队参与的活动数量
         int count = 0;
         for (Activity activity : aList) {
-            for (Team team : activity.getTeamsIterator()) {
+            Iterator<Team> teamIterator = activity.getTeamsIterator(); // 使用迭代器方法获取团队迭代器
+            while (teamIterator.hasNext()) {
+                Team team = teamIterator.next();
                 if (team.getTeamId().equals(teamId)) {
                     count++;
                 }

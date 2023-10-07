@@ -1,21 +1,27 @@
 package com.lozumi.NAMS;
 
+import javax.swing.text.html.HTMLDocument;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.Iterator;
 
 public class Activity {
-    private String id;
-    private String name;
-    private Date startTime;
-    private Date endTime;
-    private String description;
-    private String site;
+    String id;
+    String name;
+    Date startTime;
+    Date endTime;
+    String description;
+    String site;
     //创建列表
-    private List<Team> teams;
-    private List<Teacher> teachers;
-    private List<Organizer> organizers;
+    List<Team> teams;
+    List<Teacher> teachers;
+    List<Organizer> organizers;
+
+    // default constructor
+    public Activity() {
+    }
 
     public Activity(String id, String name, Date startTime, Date endTime, String description, String site) {
         this.id = id;
@@ -96,16 +102,16 @@ public class Activity {
         }
     }
 
-    public List<Team> getTeamsIterator() {
-        return teams;
+    public Iterator<Team> getTeamsIterator() {
+        return teams.iterator();
     }
 
-    public List<Teacher> getTeachersIterator() {
-        return teachers;
+    public Iterator<Teacher> getTeachersIterator() {
+        return teachers.iterator();
     }
 
-    public List<Organizer> getOrganizersIterator() {
-        return organizers;
+    public Iterator<Organizer> getOrganizersIterator() {
+        return organizers.iterator();
     }
 
     @Override
