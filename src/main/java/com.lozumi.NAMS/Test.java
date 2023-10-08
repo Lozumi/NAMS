@@ -23,7 +23,7 @@ public class Test extends TestCase {
 				new Student("stu_001", "小明", "13139149931", "22352@qq.com", "2021223111", false, "本科二年级", "软件学院"));
 		usSystem.addStudent(
 				new Student("stu_004", "小红", "13139149932", "22152@qq.com", "2021223112", true, "本科二年级", "软件学院"));
-		usSystem.addTeacher(new Teacher("stu_002", "肖老师", "15304114352", "xiao@nwpu.edu.cn", "01342", "软件学院"));
+		usSystem.addTeacher(new Teacher("tea_002", "肖老师", "15304114352", "xiao@nwpu.edu.cn", "01342", "软件学院"));
 		usSystem.addOrganizer(new Organizer("stu_003", "软件学院官方", "010" + "-03901234", "software@nwpu.edu.cn", "软件学院"));
 
 		/* 添加活动信息 */
@@ -69,7 +69,7 @@ public class Test extends TestCase {
 			initSystem();
 			System.out.println("Test 0 : successful!");
 		} catch (Exception e) {
-			System.out.println("Test 1 : failed[异常退出]!");
+			System.out.println("Test 0 : failed[异常退出]!");
 		}
 	}
 
@@ -92,6 +92,7 @@ public class Test extends TestCase {
 	 */
 	public void test02() {
 		try {
+			initSystem();
 			System.out.println("Test 2 : 查看所有的活动信息");
 			amSystem.displayActivitySubSystem();
 			System.out.println("Test 2 : successful!");
