@@ -6,7 +6,7 @@ public class Student extends User {
     boolean gender;
     String grade;
     String department;
-    List<Team> teamList;
+    List<Team> teamList = new ArrayList<Team>();
 
     public Student(String id, String name, String phoneNo, String email, String studentNo, boolean gender, String grade, String department) {
         super(id, name, phoneNo, email);

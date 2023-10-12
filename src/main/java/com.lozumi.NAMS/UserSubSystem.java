@@ -4,17 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserSubSystem {
-    List<Student> students;
-    List<Organizer> organizers;
-    List<Teacher> teachers;
-    List<Team> teams;
+    List<Student> students = new ArrayList<Student>();
+    List<Organizer> organizers = new ArrayList<Organizer>();
+    List<Teacher> teachers = new ArrayList<Teacher>();
+    List<Team> teams = new ArrayList<Team>();
 
-    public UserSubSystem() {
-        students = new ArrayList<>();
-        organizers = new ArrayList<>();
-        teachers = new ArrayList<>();
-        teams = new ArrayList<>(); // 初始化 teams 列表
-    }
+    public UserSubSystem() {};
 
     public void addStudent(Student student) {
         students.add(student);

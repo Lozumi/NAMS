@@ -6,29 +6,29 @@ import java.util.Iterator;
 import java.util.stream.Collectors;
 
 public class ActivitySubSystem {
-    List<Activity> aList;
+    List<Activity> activityList = new ArrayList<Activity>();//activity list
 
     public void addActivity(Activity activity){
-        aList.add(activity);
+        activityList.add(activity);
     }
 
     public void removeActivityById(String id){
         // 根据活动ID删除活动
         Activity activityToRemove = null;
-        for (Activity activity : aList) {
+        for (Activity activity : activityList) {
             if (activity.getId().equals(id)) {
                 activityToRemove = activity;
                 break;
             }
         }
         if (activityToRemove != null) {
-            aList.remove(activityToRemove);
+            activityList.remove(activityToRemove);
         }
     }
 
     public Activity getActivityById(String id){
         // 根据活动ID查找活动并返回
-        for (Activity activity : aList) {
+        for (Activity activity : activityList) {
             if (activity.getId().equals(id)) {
                 return activity;
             }
@@ -40,7 +40,7 @@ public class ActivitySubSystem {
         List<Activity> matchingActivities = new ArrayList<>();
 
         // 根据日期查找与给定日期相交的活动
-        for (Activity activity : aList) {
+        for (Activity activity : activityList) {
             if (activity.getStartTime().compareTo(date) <= 0 && activity.getEndTime().compareTo(date) >= 0) {
                 matchingActivities.add(activity);
             }
@@ -50,13 +50,13 @@ public class ActivitySubSystem {
 
     public List<Activity> getActivityList(){
         // 返回所有活动列表
-        return aList;
+        return activityList;
     }
 
     public int checkActivityNumOfTeam(String teamId) {
         // 计算特定团队参与的活动数量
         int count = 0;
-        for (Activity activity : aList) {
+        for (Activity activity : activityList) {
             Iterator<Team> teamIterator = activity.getTeamsIterator(); // 使用迭代器方法获取团队迭代器
             while (teamIterator.hasNext()) {
                 Team team = teamIterator.next();

@@ -1,13 +1,14 @@
 package com.lozumi.NAMS;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Team {
     String teamId;
     String teamName;
     String department;
     Student creator;
-    List<Student> studentList;
-    List<Teacher> teacherList;
+    List<Student> studentList = new ArrayList<Student>();
+    List<Teacher> teacherList = new ArrayList<Teacher>();
 
     public Team(String teamId, String teamName, String department, Student creator) {
         this.teamId = teamId;

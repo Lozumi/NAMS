@@ -15,9 +15,9 @@ public class Activity {
     String description;
     String site;
     //创建列表
-    List<Team> teams;
-    List<Teacher> teachers;
-    List<Organizer> organizers;
+    List<Team> teams = new ArrayList<Team>();
+    List<Teacher> teachers = new ArrayList<Teacher>();
+    List<Organizer> organizers = new ArrayList<Organizer>();
 
     // default constructor
     public Activity() {
@@ -30,9 +30,6 @@ public class Activity {
         this.endTime = endTime;
         this.description = description;
         this.site = site;
-        this.teams = new ArrayList<>();
-        this.teachers = new ArrayList<>();
-        this.organizers = new ArrayList<>();
     }
 
     public String getId() {
