@@ -32,7 +32,7 @@ public class UserSubSystem {
     public Student getStudentById(String id) {
         // 根据学生ID查找学生并返回
         for (Student student : students) {
-            if (student.getStudentNo().equals(id)) {
+            if (student.getId().equals(id)) {
                 return student;
             }
         }
