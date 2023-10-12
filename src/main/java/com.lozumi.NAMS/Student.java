@@ -1,5 +1,7 @@
 package com.lozumi.NAMS;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Student extends User {
     String studentNo;
@@ -32,8 +34,8 @@ public class Student extends User {
         return department;
     }
     //获取学生创建的团队列表
-    public List<Team> getTeamList(){
-        return teamList;
+    public ArrayList<Team> getTeamList(){
+        return teamList.stream().collect(Collectors.toCollection(ArrayList::new));//转换List为ArrayList
     }
 
     @Override
