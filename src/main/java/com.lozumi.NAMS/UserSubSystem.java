@@ -114,6 +114,7 @@ public class UserSubSystem {
             // 直接创建并添加 Team 对象到 teams 列表
             Team newTeam = new Team(teamId, teamName, department, creator);
             teams.add(newTeam);
+            creator.teamList.add(newTeam);
         }
     }
 
@@ -125,7 +126,7 @@ public class UserSubSystem {
 
         if (student != null && team != null && creator != null && creator.getTeamList().contains(team)) {
             team.addStudent(student);
-            student.teamList.add(team);
+
         }
     }
 
