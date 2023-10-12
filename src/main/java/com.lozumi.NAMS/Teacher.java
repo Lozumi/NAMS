@@ -24,20 +24,18 @@ public class Teacher extends User{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Teacher").append('[')
-                .append("teacherNo=")
+        final StringBuilder sb = new StringBuilder("Teacher")
                 .append(teacherNo)
-                .append("_department=")
+                .append("_")
                 .append(department)
-                .append("_id=")
+                .append("_")
                 .append(id)
-                .append("_name=")
+                .append("_")
                 .append(name)
-                .append("_phoneNo=")
+                .append("_")
                 .append(phoneNo)
-                .append("_email=")
-                .append(email)
-                .append(']');
+                .append("_")
+                .append(email);
         return sb.toString();
     }
 }

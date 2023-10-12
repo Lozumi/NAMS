@@ -14,18 +14,16 @@ public class Organizer extends User{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Teacher").append('[')
-                .append("unit=")
+        final StringBuilder sb = new StringBuilder("Organizer")
                 .append(unit)
-                .append("_id=")
+                .append("_")
                 .append(id)
-                .append("_name=")
+                .append("_")
                 .append(name)
-                .append("_phoneNo=")
+                .append("_")
                 .append(phoneNo)
-                .append("_email=")
-                .append(email)
-                .append(']');
+                .append("_")
+                .append(email);
         return sb.toString();
     }
 }
