@@ -1,6 +1,8 @@
 package com.lozumi.NAMS;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Student extends User {
@@ -33,14 +35,26 @@ public class Student extends User {
     public String getDepartment() {
         return department;
     }
+
     //获取学生创建的团队列表
-    public ArrayList<Team> getTeamList(){
+    public ArrayList<Team> getTeamList() {
         return teamList.stream().collect(Collectors.toCollection(ArrayList::new));//转换List为ArrayList
+    }
+
+    private String getTeamNameList() {
+        String teamNameList = "";
+        for (Team team : teamList) {
+            if (Objects.equals(teamNameList, ""))
+                teamNameList += team.teamName;
+            else
+                teamNameList += "_" + team.teamName;
+        }
+        return teamNameList;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder()
+        StringBuilder sb = new StringBuilder()
                 .append(studentNo)
                 .append("_")
                 .append(gender)
@@ -49,7 +63,7 @@ public class Student extends User {
                 .append("_")
                 .append(department)
                 .append("_")
-                .append(teamList)
+                .append(getTeamNameList())
                 .append("_")
                 .append(id)
                 .append("_")

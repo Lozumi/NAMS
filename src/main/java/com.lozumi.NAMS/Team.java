@@ -1,6 +1,7 @@
 package com.lozumi.NAMS;
-import java.util.List;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Team {
     String teamId;
@@ -51,7 +52,7 @@ public class Team {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder()
+        StringBuilder sb = new StringBuilder()
                 .append(teamId)
                 .append("_")
                 .append(teamName)
