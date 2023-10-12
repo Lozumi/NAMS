@@ -16,7 +16,7 @@ public class LectureActivity extends Activity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("LectureActivity")
+        final StringBuilder sb = new StringBuilder()
                 .append(keySpeaker)
                 .append("_")
                 .append(id)

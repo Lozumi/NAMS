@@ -41,21 +41,6 @@ public class User {
     }
 
     @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("User").append('[')
-                .append("id=")
-                .append(id)
-                .append("_name=")
-                .append(name)
-                .append("_phoneNo=")
-                .append(phoneNo)
-                .append("_email=")
-                .append(email)
-                .append(']');
-        return sb.toString();
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -68,4 +53,16 @@ public class User {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder()
+                .append(id)
+                .append("_")
+                .append(name)
+                .append("_")
+                .append(phoneNo)
+                .append("_")
+                .append(email);
+        return sb.toString();
+    }
 }

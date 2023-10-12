@@ -16,7 +16,7 @@ public class ArtisticActivity extends Activity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("ArtisticActivity")
+        final StringBuilder sb = new StringBuilder()
                 .append(type)
                 .append("_")
                 .append(id)

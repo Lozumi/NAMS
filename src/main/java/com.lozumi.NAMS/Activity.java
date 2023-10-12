@@ -126,7 +126,7 @@ public class Activity {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Activity")
+        final StringBuilder sb = new StringBuilder()
                 .append(id)
                 .append("_")
                 .append(name)

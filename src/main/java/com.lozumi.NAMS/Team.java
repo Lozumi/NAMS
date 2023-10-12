@@ -43,7 +43,6 @@ public class Team {
 
     public void addStudent(Student student) {
         studentList.add(student);
-        student.teamList.add(this);
     }
 
     public void addTeacher(Teacher teacher) {
@@ -52,7 +51,7 @@ public class Team {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Team")
+        final StringBuilder sb = new StringBuilder()
                 .append(teamId)
                 .append("_")
                 .append(teamName)

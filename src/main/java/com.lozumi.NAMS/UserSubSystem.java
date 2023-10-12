@@ -19,7 +19,7 @@ public class UserSubSystem {
         // 根据学生ID删除学生
         Student studentToRemove = null;
         for (Student student : students) {
-            if (student.getStudentNo().equals(id)) {
+            if (student.getId().equals(id)) {
                 studentToRemove = student;
                 break;
             }
@@ -125,6 +125,7 @@ public class UserSubSystem {
 
         if (student != null && team != null && creator != null && creator.getTeamList().contains(team)) {
             team.addStudent(student);
+            student.teamList.add(team);
         }
     }
 

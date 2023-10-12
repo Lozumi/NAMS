@@ -20,7 +20,7 @@ public class PartyActivity extends Activity {
     }
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("PartyActivity").append('[')
+        final StringBuilder sb = new StringBuilder("PartyActivity")
                 .append("theme=")
                 .append(theme)
                 .append("_classification=")

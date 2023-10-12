@@ -38,7 +38,7 @@ public class Student extends User {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Student")
+        final StringBuilder sb = new StringBuilder()
                 .append(studentNo)
                 .append("_")
                 .append(gender)
@@ -47,7 +47,15 @@ public class Student extends User {
                 .append("_")
                 .append(department)
                 .append("_")
-                .append(teamList);
+                .append(teamList)
+                .append("_")
+                .append(id)
+                .append("_")
+                .append(name)
+                .append("_")
+                .append(phoneNo)
+                .append("_")
+                .append(email);
         return sb.toString();
     }
 }

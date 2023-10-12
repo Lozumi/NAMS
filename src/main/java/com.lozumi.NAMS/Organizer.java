@@ -14,7 +14,7 @@ public class Organizer extends User{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Organizer")
+        final StringBuilder sb = new StringBuilder()
                 .append(unit)
                 .append("_")
                 .append(id)

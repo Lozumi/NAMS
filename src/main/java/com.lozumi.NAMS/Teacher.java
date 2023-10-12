@@ -24,7 +24,7 @@ public class Teacher extends User{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Teacher")
+        final StringBuilder sb = new StringBuilder()
                 .append(teacherNo)
                 .append("_")
                 .append(department)
